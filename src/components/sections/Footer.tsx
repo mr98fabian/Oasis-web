@@ -68,7 +68,7 @@ export function Footer() {
                         {/* Social Links */}
                         <div className="flex items-center gap-4 mt-6">
                             <a
-                                href="https://instagram.com"
+                                href="https://instagram.com/oasisspadallas"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-oasis-gold/20 transition-colors duration-300"
