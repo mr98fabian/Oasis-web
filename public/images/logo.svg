@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 100" fill="none">
+  <style>
+    @font-face { font-family: "Serif"; src: local("Playfair Display"), local("Didot"), local("Times New Roman"), serif; }
+    text { font-family: "Serif"; font-weight: bold; letter-spacing: 0.1em; }
+  </style>
+  <text x="50%" y="65%" text-anchor="middle" fill="#D4AF37" font-size="60">OASIS</text>
+  <!-- Stylized A teardrop accent (optional, keeping it simple for now) -->
+</svg>

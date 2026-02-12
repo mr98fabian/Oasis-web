@@ -12,10 +12,9 @@ export function Footer() {
                         <div className="mb-6">
                             <a href="/" className="block w-28 h-auto">
                                 <img
-                                    src="/images/logo.png"
+                                    src="/images/logo.svg"
                                     alt="Oasis Beauty & Wellness"
-                                    className="w-full h-auto object-contain brightness-0 invert"
-                                    style={{ filter: "brightness(0) invert(1)" }}
+                                    className="w-full h-auto object-contain"
                                 />
                             </a>
                         </div>

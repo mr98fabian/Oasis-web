@@ -28,7 +28,7 @@ export function Navbar() {
                             {/* Fallback text if image missing (screen reader accessible) */}
                             <span className="sr-only">Oasis</span>
                             <img
-                                src="/images/logo.png"
+                                src="/images/logo.svg"
                                 alt="Oasis Beauty & Wellness"
                                 className="w-full h-full object-contain"
                             />
