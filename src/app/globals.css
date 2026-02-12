@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+/* ===== 🌿 OASIS DESIGN SYSTEM ===== */
+
+@theme inline {
+  /* --- Brand Colors --- */
+  --color-oasis-emerald: #044D29;
+  --color-oasis-emerald-light: #066B3A;
+  --color-oasis-emerald-dark: #033A1F;
+  --color-oasis-gold: #D4AF37;
+  --color-oasis-gold-light: #E5C968;
+  --color-oasis-cream: #F9F9F5;
+  --color-oasis-dark: #1A1A1A;
+  --color-oasis-sand: #E6DCCA;
+  --color-oasis-sand-light: #F0EBE1;
+
+  /* --- Base Tokens --- */
+  --color-background: #F9F9F5;
+  --color-foreground: #1A1A1A;
+
+  /* --- Typography --- */
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-sans: "Lato", system-ui, sans-serif;
+}
+
+/* ===== Global Base Styles ===== */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ===== Utility: Serif Headings ===== */
+h1, h2, h3 {
+  font-family: var(--font-serif);
+}
+
+/* ===== Selection Color ===== */
+::selection {
+  background-color: #044D29;
+  color: #F9F9F5;
+}
+
+/* ===== Scrollbar (Webkit) ===== */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-oasis-cream);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-oasis-emerald);
+  border-radius: 3px;
+}
