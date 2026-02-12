@@ -56,7 +56,7 @@ export function Services() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     {SERVICES.map((service, index) => (
                         <FadeIn key={service.title} delay={index * 0.12}>
-                            <div className="group relative bg-white rounded-2xl p-8 hover:shadow-[0_8px_30px_rgba(0,0,0,0.06)] transition-all duration-500 border border-oasis-sand/30 overflow-hidden">
+                            <div className="group relative bg-white dark:bg-[#122A1B] rounded-2xl p-8 hover:shadow-[0_20px_60px_rgba(4,77,41,0.12)] hover:-translate-y-2 hover:scale-[1.02] transition-all duration-500 ease-out border border-oasis-sand/30 dark:border-oasis-emerald/10 overflow-hidden cursor-pointer">
                                 {/* Tag badge */}
                                 {service.tag && (
                                     <div className="absolute top-6 right-6 px-3 py-1 rounded-full bg-oasis-gold/10 text-oasis-gold text-xs font-medium">
@@ -65,7 +65,7 @@ export function Services() {
                                 )}
 
                                 {/* Icon */}
-                                <div className="w-12 h-12 rounded-xl bg-oasis-emerald/10 flex items-center justify-center mb-6 group-hover:bg-oasis-emerald group-hover:text-white transition-all duration-300">
+                                <div className="w-12 h-12 rounded-xl bg-oasis-emerald/10 flex items-center justify-center mb-6 group-hover:bg-oasis-emerald group-hover:text-white group-hover:rotate-12 group-hover:scale-110 transition-all duration-500 ease-out">
                                     <service.icon className="w-5 h-5 text-oasis-emerald group-hover:text-white transition-colors duration-300" />
                                 </div>
 

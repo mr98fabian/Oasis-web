@@ -3,6 +3,7 @@
 import { FadeIn } from "@/components/ui/FadeIn";
 import { Button } from "@/components/ui/Button";
 import { CalendarCheck, Clock, Sparkles } from "lucide-react";
+import { GoldenParticles } from "@/components/ui/GoldenParticles";
 
 /**
  * Booking CTA Section with Calendly Integration.
@@ -17,6 +18,9 @@ export function BookingCTA() {
         <section id="reservar" className="py-24 bg-white relative overflow-hidden">
             {/* Decorative background elements */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-oasis-emerald/3 rounded-full blur-3xl" />
+
+            {/* Floating golden particles */}
+            <GoldenParticles />
 
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <FadeIn>

@@ -37,7 +37,9 @@ body {
 }
 
 /* ===== Utility: Serif Headings ===== */
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-family: var(--font-serif);
 }
 
@@ -59,4 +61,63 @@ h1, h2, h3 {
 ::-webkit-scrollbar-thumb {
   background: var(--color-oasis-emerald);
   border-radius: 3px;
+}
+
+/* ===== 🌙 DARK MODE ===== */
+html.dark {
+  --color-background: #0A1A12;
+  --color-foreground: #F0EBE1;
+  --color-oasis-cream: #0F2518;
+  --color-oasis-dark: #F0EBE1;
+  --color-oasis-sand: #1A3325;
+  --color-oasis-sand-light: #162B1F;
+}
+
+html.dark body {
+  background: #0A1A12;
+  color: #F0EBE1;
+}
+
+html.dark ::selection {
+  background-color: #D4AF37;
+  color: #0A1A12;
+}
+
+html.dark ::-webkit-scrollbar-track {
+  background: #0A1A12;
+}
+
+html.dark ::-webkit-scrollbar-thumb {
+  background: #D4AF37;
+}
+
+/* ===== ✨ ANIMATIONS ===== */
+
+/* Loader gold shimmer */
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(200%);
+  }
+}
+
+/* Custom cursor hide on desktop (applied via JS) */
+.cursor-hidden,
+.cursor-hidden * {
+  cursor: none !important;
+}
+
+/* Reduced motion: disable non-essential animations */
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
