@@ -2,36 +2,29 @@
 
 import { Button } from "@/components/ui/Button";
 import { FadeIn } from "@/components/ui/FadeIn";
-import { motion } from "framer-motion";
 import { Star } from "lucide-react";
+import { ScrollMouse } from "@/components/ui/ScrollMouse";
+import { HeroBotanicalScroll } from "@/components/ui/HeroBotanicalScroll";
 
 export function Hero() {
     return (
         <section
             id="inicio"
-            className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20"
+            className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 bg-[#EAF2EE]"
+            style={{
+                backgroundImage: "radial-gradient(circle at center, #F0F7F4 0%, #D8E6DE 100%)"
+            }}
         >
-            {/* Background with emerald gradient overlay */}
-            <div className="absolute inset-0 bg-gradient-to-br from-oasis-emerald-dark/90 via-oasis-emerald/85 to-oasis-emerald-light/80" />
-
-            {/* Subtle botanical pattern */}
-            <div className="absolute inset-0 opacity-5">
-                <div
-                    className="w-full h-full"
-                    style={{
-                        backgroundImage: `radial-gradient(circle at 20% 50%, rgba(212,175,55,0.3) 0%, transparent 50%),
-                              radial-gradient(circle at 80% 20%, rgba(212,175,55,0.2) 0%, transparent 50%)`,
-                    }}
-                />
-            </div>
+            {/* NEW: Large High-End Botanical Scroll Animation */}
+            <HeroBotanicalScroll />
 
             {/* Content */}
             <div className="relative z-10 max-w-4xl mx-auto px-4 text-center">
                 {/* Tagline chip */}
                 <FadeIn delay={0.1}>
-                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-8">
+                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-oasis-emerald/5 border border-oasis-emerald/10 mb-8">
                         <Star className="w-4 h-4 text-oasis-gold fill-oasis-gold" />
-                        <span className="text-white/90 text-sm font-medium tracking-wide">
+                        <span className="text-oasis-emerald/80 text-sm font-medium tracking-wide">
                             Estudio Boutique de Belleza
                         </span>
                     </div>
@@ -39,7 +32,7 @@ export function Hero() {
 
                 {/* H1: Main value proposition */}
                 <FadeIn delay={0.3}>
-                    <h1 className="font-serif text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-white leading-[1.1] mb-6">
+                    <h1 className="font-serif text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-oasis-dark leading-[1.1] mb-6">
                         Tu refugio{" "}
                         <span className="text-oasis-gold italic">de belleza</span>
                     </h1>
@@ -47,7 +40,7 @@ export function Hero() {
 
                 {/* Subtitle */}
                 <FadeIn delay={0.5}>
-                    <p className="text-white/80 text-lg sm:text-xl max-w-2xl mx-auto leading-relaxed mb-10 font-light">
+                    <p className="text-oasis-dark/70 text-lg sm:text-xl max-w-2xl mx-auto leading-relaxed mb-10 font-light">
                         Descubre una experiencia de bienestar diseñada para tu descanso.
                         Un santuario de calma donde cada detalle está pensado para ti.
                     </p>
@@ -58,27 +51,23 @@ export function Hero() {
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                         <a href="#reservar">
                             <Button
-                                variant="outline"
+                                variant="primary"
                                 size="lg"
-                                className="border-oasis-gold text-oasis-gold hover:bg-oasis-gold hover:text-white text-base"
+                                className="bg-oasis-emerald text-white hover:bg-oasis-emerald-dark text-base px-10"
                             >
                                 Reservar mi Momento
                             </Button>
                         </a>
                         <a href="#servicios">
                             <Button
-                                variant="ghost"
+                                variant="outline"
                                 size="lg"
-                                className="text-white/80 hover:text-white hover:bg-white/10"
+                                className="border-oasis-emerald/20 text-oasis-emerald hover:bg-oasis-emerald/5"
                             >
                                 Explorar Servicios
                             </Button>
                         </a>
                     </div>
-                    {/* Micro-copy: reduces anxiety (neuro-design) */}
-                    <p className="text-white/50 text-xs mt-4 tracking-wide">
-                        Sin cobro por adelantado · Cancelación flexible
-                    </p>
                 </FadeIn>
 
                 {/* Social proof (neuro-design: authority) */}
@@ -88,13 +77,13 @@ export function Hero() {
                             {[1, 2, 3, 4].map((i) => (
                                 <div
                                     key={i}
-                                    className="w-10 h-10 rounded-full bg-oasis-gold/30 border-2 border-white/30 flex items-center justify-center text-white text-xs font-medium"
+                                    className="w-10 h-10 rounded-full bg-oasis-sand border-2 border-white flex items-center justify-center text-oasis-emerald text-xs font-semibold"
                                 >
                                     {String.fromCharCode(64 + i)}
                                 </div>
                             ))}
                         </div>
-                        <div className="text-left">
+                        <div className="text-left border-l border-oasis-sand pl-4 ml-2">
                             <div className="flex items-center gap-1">
                                 {[1, 2, 3, 4, 5].map((i) => (
                                     <Star
@@ -103,7 +92,7 @@ export function Hero() {
                                     />
                                 ))}
                             </div>
-                            <p className="text-white/60 text-xs">
+                            <p className="text-oasis-dark/60 text-xs font-medium">
                                 +200 clientas satisfechas
                             </p>
                         </div>
@@ -111,16 +100,10 @@ export function Hero() {
                 </FadeIn>
             </div>
 
-            {/* Scroll indicator */}
-            <motion.div
-                className="absolute bottom-8 left-1/2 -translate-x-1/2"
-                animate={{ y: [0, 8, 0] }}
-                transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-            >
-                <div className="w-6 h-10 rounded-full border-2 border-white/30 flex items-start justify-center p-1.5">
-                    <div className="w-1.5 h-3 rounded-full bg-white/50" />
-                </div>
-            </motion.div>
+            {/* New Interactive Scroll Mouse Component */}
+            <div className="absolute bottom-10 left-1/2 -translate-x-1/2">
+                <ScrollMouse />
+            </div>
         </section>
     );
 }

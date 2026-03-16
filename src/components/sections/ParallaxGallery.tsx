@@ -25,7 +25,7 @@ const GALLERY_ITEMS = [
         layout: "right" as const,
     },
     {
-        src: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=1200&q=80",
+        src: "/images/diseno-mirada.png",
         alt: "Diseño de cejas profesional en Oasis - mirada perfecta",
         title: "Diseño de Mirada",
         subtitle: "El marco perfecto para tus ojos. Diseño personalizado según tu rostro.",

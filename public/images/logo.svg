@@ -1,8 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 100" fill="none">
-  <style>
-    @font-face { font-family: "Serif"; src: local("Playfair Display"), local("Didot"), local("Times New Roman"), serif; }
-    text { font-family: "Serif"; font-weight: bold; letter-spacing: 0.1em; }
-  </style>
-  <text x="50%" y="65%" text-anchor="middle" fill="#D4AF37" font-size="60">OASIS</text>
-  <!-- Stylized A teardrop accent (optional, keeping it simple for now) -->
+<svg width="200" height="60" viewBox="0 0 200 60" fill="none"
+    xmlns="http://www.w3.org/2000/svg">
+    <!-- Text: OASIS -->
+    <text x="10" y="40" fill="#044D29" style="font-family: 'Playfair Display', serif; font-size: 36px; letter-spacing: 0.15em; font-weight: 500;">OASIS</text>
+
+    <!-- Subtext -->
+    <text x="12" y="55" fill="#D4AF37" style="font-family: 'Lato', sans-serif; font-size: 10px; letter-spacing: 0.4em; text-transform: uppercase;">Beauty &amp; Wellness</text>
 </svg>
