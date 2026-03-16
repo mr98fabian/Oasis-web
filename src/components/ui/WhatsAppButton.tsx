@@ -10,7 +10,7 @@ import { motion } from "framer-motion";
  */
 export function WhatsAppButton() {
     // Replace with your real WhatsApp number (international format without +)
-    const WHATSAPP_NUMBER = "14696239844";
+    const WHATSAPP_NUMBER = "14695144469";
     const MESSAGE = encodeURIComponent(
         "Hola Oasis, me gustaría saber más sobre sus servicios y agendar una cita. 🌿"
     );
